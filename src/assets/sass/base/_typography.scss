@@ -1,0 +1,18 @@
+
+.main-heading {
+    color: $theme-color;
+    font-size: $px24;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 $px5 0;
+    @include media-breakpoint-up(md) {
+        margin: 0;
+    }
+}
+
+h2 {
+    color: $theme-secondary-color;
+    font-size: $px22;
+    font-weight: 700;
+    margin-bottom: $px15;
+}

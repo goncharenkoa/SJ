@@ -1,0 +1,45 @@
+* {
+	&:focus {
+		outline: none!important;
+	}
+}
+input, textarea, select, a { outline: none; }
+
+a {
+	transition: 0,3s;
+	&:hover {
+        color: $theme-color;
+    }
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+html {
+	position: relative;
+    height: 100%;
+	min-height: 100%;
+	font-size: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    min-height: 100%;
+    height: 100%;
+    font-family: $open-sans;
+    font-weight: 400;
+    line-height: initial;
+	color: $text-color;
+}
+
+
+p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{
+    user-select: text;
+}
+
+.full-width {
+	width: 100%;
+}

@@ -1,0 +1,60 @@
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    display: block;
+}
+
+.bootstrap-select {
+    .dropdown-toggle {
+        height: 2.4375rem;
+        line-height: 2.4375rem;
+        padding: 0 0 0 $px12;
+        border-radius: 0;
+        background: $theme-neutral-color;
+        border: 1px solid $border-color2;
+        position: relative;
+        &:focus {
+            outline: none!important;
+            box-shadow: none;
+        }
+        &:after {
+            content: $icon-arrow-1-down;
+            @extend [class^="icon-"];
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.3125rem;
+            width: 2.3125rem;
+            background: $select-arrow-color;
+            color: $theme-neutral-color;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: $px3 $px12;
+            cursor: pointer;
+            &:hover {
+                background: $theme-color;
+                a {
+                    color: $theme-neutral-color;
+                }
+            }
+            a {
+                font-size: $px16;
+                color: $label-color;
+                span.text {
+                    display: block;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

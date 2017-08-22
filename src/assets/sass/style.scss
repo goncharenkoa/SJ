@@ -1,0 +1,27 @@
+// Import Bootstrap parts
+@import "../bootstrap-4.0.0-alpha.6/scss/bootstrap";
+
+$breakpoints: $grid-breakpoints;
+
+// Bases classes are fundamental building blocks based on the site design
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/colors';
+@import 'base/icons';
+
+@import 'base/variables';
+@import 'base/baseelements';
+@import 'base/typography';
+
+
+// UI Components are generic and reusable, and only relies on base and vendor css
+@import 'ui_components/buttons';
+@import 'ui_components/inputs';
+@import 'ui_components/select';
+@import 'ui_components/tables.scss';
+@import 'ui_components/tree.scss';
+
+@import 'layouts/header';
+
+@import 'modules/nav';
+@import 'modules/main';

@@ -1,0 +1,260 @@
+.navbar-brand {
+    @include media-breakpoint-up(xs) {
+        margin: 0;
+        padding: 0 $px15;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 0 $px15 0 0;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-right: 3.5rem;
+    }
+}
+
+.navbar-toggler-icon {
+    width: $px30;
+    height: $px30;
+}
+
+.burgx, .burgx2, .burgx3 {
+  margin-top: 3px;
+  background: $theme-color;
+  width: $px33;
+  height: $px4;
+  position: absolute;
+  transform: rotate(-180deg);
+}
+
+.burgx2 {
+  margin-top: $px13;
+}
+
+.burgx3 {
+  margin-top: $px23;
+  transform: rotate(180deg);
+}
+
+.menu-right {
+    @include media-breakpoint-up(xs) {
+        padding-bottom: $px15;
+    }
+    @include media-breakpoint-up(md) {
+        display: flex;
+        padding: 0;
+        margin: 0 -$px10;
+    }
+    @include media-breakpoint-up(lg) {
+        margin: 0 -$px20;
+    }
+    li {
+        font-size: $px14;
+        font-weight: 600;
+        @include media-breakpoint-up(xl) {
+            font-size: $px18;
+        }
+        @include media-breakpoint-up(xs) {
+            padding: $px8 $px5;
+        }
+        @include media-breakpoint-up(md) {
+            padding: 0 $px10;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 0 $px20;
+        }
+        &:first-child {
+            border-right: 1px solid $border-color;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            color: $text-color;
+        }
+        i {
+            color: $theme-secondary-color;
+            font-size: $px35;
+            line-height: $px18;
+            margin-right: $px4;
+            @include media-breakpoint-up(xs) {
+                font-size: $px30;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: $px35;
+            }
+        }
+    }
+}
+
+.navbar {
+    @include media-breakpoint-up(xs) {
+        padding: $px10 0;
+        width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 0 $px15;
+    }
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: $theme-neutral-color;
+    }
+    @include media-breakpoint-up(md) {
+        position: relative;
+        background: transparent;
+    }
+}
+
+.navbar-nav {
+    @include media-breakpoint-up(xs) {
+        border-top: 2px solid $border-color;
+        padding: 0 $px15;
+    }
+    padding: 0;
+    .nav-item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            height: $header-height;
+            border-right: 2px solid $border-color;
+            width: 25%;
+            justify-content: center;
+        }
+        &:first-child {
+            @include media-breakpoint-up(md) {
+                border-left: 2px solid $border-color;
+            }
+        }
+        i {
+            display: inline-block;
+            color: $theme-color;
+            font-size: 30px;
+            line-height: 43px;
+            margin-right: $px5;
+            @include media-breakpoint-up(md) {
+                display: block;
+                color: $theme-color;
+                font-size: 45px;
+                line-height: 35px;
+                margin: 0;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 55px;
+                line-height: 43px;
+            }
+        }
+        &.show {
+            position: relative;
+            @include media-breakpoint-up(xs) {
+                display: block;
+            }
+            @include media-breakpoint-up(md) {
+                display: flex;
+            }
+            &:after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: $theme-neutral-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 5;
+            }
+        }
+        .nav-link {
+            text-transform: uppercase;
+            font-size: $px14;
+            font-weight: 400;
+            color: $nav-text-color;
+            transition: 0.3s;
+            &:hover {
+                color: darken($nav-text-color, 20%);
+            }
+            @include media-breakpoint-up(xs) {
+                display: flex;
+                align-items: center;
+                padding: 0 $px5;
+            }
+            @include media-breakpoint-up(sm) {
+                font-size: $px12;
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+                padding: $px8 $px15;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: $px16;
+                padding: $px8 $px24;
+            }
+            @include media-breakpoint-up(xl) {
+                padding: $px8 $px35;
+            }
+            &.dropdown-toggle {
+                &:after {
+                    content: normal;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        padding: 0;
+        @include media-breakpoint-up(md) {
+            border: 2px solid $border-color;
+            margin: -2px 0 0;
+            left: -2px;
+            z-index: 3;
+            min-width: 210px;
+        }
+        @include media-breakpoint-up(xl) {
+            min-width: 264px;
+        }
+        .dropdown-item {
+            font-size: $px14;
+            color: $sub-nav-text-color;
+            padding: $px4 $px15;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            @include media-breakpoint-up(lg) {
+                font-size: $px16;
+            }
+            &:active, &:hover {
+                background: $theme-color;
+                color: $theme-neutral-color;
+                i {
+                    color: $theme-neutral-color;
+                }
+            }
+            i {
+                color: $sub-nav-text-color;
+                font-size: $px35;
+                transition: 0.3s;
+                width: $px30;
+                text-align: center;
+            }
+            &:first-child {
+                i {
+                    font-size: $px18;
+                }
+            }
+            &:nth-child(2) {
+                i {
+                    font-size: $px18;
+                }
+            }
+        }
+    }
+}

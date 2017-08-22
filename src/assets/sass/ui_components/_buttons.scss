@@ -1,0 +1,49 @@
+button, a {
+    cursor: pointer;
+    outline: none!important;
+    &:hover, &:focus, &:active {
+        outline: 0!important;
+        text-decoration: none;
+    }
+}
+
+button, input, optgroup, select, textarea {
+    font-family: $open-sans;
+}
+
+.btn-primary {
+    background: $theme-color;
+    color: $theme-neutral-color;
+    border: none;
+    height: 2.4375rem;
+    line-height: 2.125rem;
+    transition: 0.3s;
+    font-size: $px14;
+    @include media-breakpoint-up(md) {
+        font-size: $px12;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: $px13;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: $px16;
+    }
+    &:hover {
+        background: lighten($theme-color, 5%);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    &.sm {
+        min-width: 5.9375rem;
+    }
+}
+
+.btn-danger {
+    @extend .btn-primary;
+    background: $theme-secondary-color;
+    &:hover {
+        background: lighten($theme-secondary-color, 5%);
+    }
+}

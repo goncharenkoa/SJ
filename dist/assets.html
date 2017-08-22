@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="burgx"></span>
+                    <span class="burgx2"></span>
+                    <span class="burgx3"></span>
+                </span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" class="img-fluid" alt="JS logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <i class="icon-speedometer"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-router"></i>
+                            Assets
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-bar-chart-stats-up"></i>
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#"><i class="icon-notification"></i>Alarms</a>
+                            <a class="dropdown-item" href="#"><i class="icon-warning-triangle"></i>Faults</a>
+                            <a class="dropdown-item" href="#"><i class="icon-Pumps2"></i>Pumps</a>
+                            <a class="dropdown-item" href="#"><i class="icon-hand"></i>Passenger Trap</a>
+                            <a class="dropdown-item" href="#"><i class="icon-Command"></i>Command</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-user"></i>
+                            User
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu-right">
+                    <li><a href="#"><i class="icon-user-2"></i>Administrator</a></li>
+                    <li><a href="#"><i class="icon-Logout"></i>Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header -->
+    <main class="main py-4 py-md-5">
+        <div class="container-fluid">
+            <section class="search-container">
+                <div class="d-md-flex">
+                    <h1 class="main-heading syb-xs">Find asset</h1>
+
+                    <form action="">
+                        <div class="d-md-flex align-items-center">
+                            <div class="input-group search sx">
+                                <input type="search" class="form-control" placeholder="find asset">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button"><i class="icon-Search"></i></button>
+                                </span>
+                            </div>
+
+                            <div class="input-group ml-1 filter">
+                                <button class="btn-primary sm" type="button" data-toggle="collapse" data-target="#fieldsets-section" aria-expanded="false" aria-controls="collapseExample">Filter</button>
+                            </div>
+                        </div><!-- d-flex -->
+                    </form>
+                </div><!-- d-md-flex -->
+            </section><!-- search-container -->
+
+            <section id="filters-section" class="filters-section collapse mt-4">
+                <div class="row">
+
+                    <div class="col-12">
+                        <ul class="filters-list">
+                            <li>Company</li>
+                            <li>Location</li>
+                            <li><button id="clear-filter" class="btn-primary sm" type="button">Clear filters</button></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section><!-- fieldsets-section -->
+
+            <section class="fieldsets-section collapse" id="fieldsets-section">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Location</h2>
+                                    </div>
+                                </div>
+
+                                <div class="row sm-row">
+                                    <div class="col-sm-4 sm-col">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="tc code">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sm-col">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="prefix">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sm-col">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="block">
+                                        </div>
+                                    </div>
+                                </div><!-- sm-row -->
+                            </div>
+                        </div><!-- row -->
+
+                        <div class="row pt-5">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Status & Company</h2>
+                                    </div>
+                                </div>
+
+                                <div class="row sm-row align-items-end">
+                                    <div class="col-sm-4 sm-col">
+                                        <div class="form-group">
+                                            <label for="">Asset Stauts</label>
+                                            <select class="form-control selectpicker" title="Select">
+                                                <option>Option1</option>
+                                                <option>Option2</option>
+                                                <option>Option3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sm-col">
+                                        <div class="form-group">
+                                            <label for="">Company</label>
+                                            <select class="form-control selectpicker" title="All">
+                                                <option>Option1</option>
+                                                <option>Option2</option>
+                                                <option>Option3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sm-col hidden-md-down">
+                                        <div class="form-group">
+                                            <div class="row sm-row">
+                                                <div class="col-6 sm-col">
+                                                    <button id="close-apply" class="btn-primary full-width" type="button" data-toggle="collapse" data-target="#filters-section fieldsets-section" aria-expanded="false" aria-controls="collapseExample">Close & Apply</button>
+                                                </div>
+                                                <div class="col-6 sm-col">
+                                                    <button class="btn-danger full-width" type="button" data-toggle="collapse" data-target="#fieldsets-section" aria-expanded="false" aria-controls="collapseExample">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- sm-row -->
+                            </div>
+                        </div><!-- row -->
+
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Errors</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="checkboxes-list">
+                                    <li>
+                                        <div class="f-group">
+                                            <input class="checkbox" id="chb1" type="checkbox" data-select="notification">
+                                            <label for="chb1" class="checkbox-label">Alarms</label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="f-group">
+                                            <input class="checkbox" id="chb2" type="checkbox" data-select="notification">
+                                            <label for="chb2" class="checkbox-label">Faults</label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="f-group">
+                                            <input class="checkbox" id="chb3" type="checkbox" data-select="notification">
+                                            <label for="chb3" class="checkbox-label">Passenger Traps</label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="f-group">
+                                            <input class="checkbox" id="chb4" type="checkbox" data-select="notification">
+                                            <label for="chb4" class="checkbox-label">Pumps</label>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-4 sm-col hidden-lg-up mt-2">
+                                <div class="form-group">
+                                    <div class="row sm-row">
+                                        <div class="col-6 sm-col">
+                                            <button class="btn-primary full-width" type="button">Close & Apply</button>
+                                        </div>
+                                        <div class="col-6 sm-col">
+                                            <button class="btn-danger full-width" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- row -->
+
+            </section><!-- fieldsets-section -->
+
+            <div class="row sm-row">
+                <div class="col-lg-6 col-xl-5 sm-col">
+                    <section class="fieldsets-section">
+                        <div class="d-md-flex align-items-center mb-4">
+                            <h1 class="main-heading syb-xs">Locations</h1>
+
+                            <form action="">
+                                <div class="d-flex align-items-center">
+                                    <div class="input-group search mx-4">
+                                        <input type="search" class="form-control" placeholder="find asset">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"><i class="icon-Search"></i></button>
+                                        </span>
+                                    </div>
+                                </div><!-- d-flex -->
+                            </form>
+                        </div><!-- d-md-flex -->
+
+                        <div id="jstree">
+                            <!-- in this example the tree is populated from inline HTML -->
+                            <ul>
+                                <li>Holland - Bukit Panjang Town Council <span class="count">6</span>
+                                    <ul>
+                                        <li id="child_node_1">ZHENGHUA <span class="count">6</span>
+                                            <ul>
+                                                <li id="child_node_2">NG CHOON JOO <span class="count">6</span>
+                                                    <ul>
+                                                        <li>Block: 547A SEGAR ROAD 67547 <span class="count">3</span> <span class="notification icon-notification pl-2"></span> <span class="warning icon-warning-triangle pl-2"></span></li>
+                                                        <li>Block: 547A SEGAR ROAD 67547 <span class="count">3</span> <span class="notification icon-notification pl-2"></span> <span class="warning icon-warning-triangle pl-2"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Chua Chu Kang Town Council <span class="count">6</span>
+                                    <ul>
+                                        <li>Chua Chu Kang Town Council</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </section><!-- fieldsets-section -->
+                </div>
+
+                <div class="col-lg-6 col-xl-4 sm-col">
+                    <section class='fieldsets-section'>
+                        <h1 class="main-heading mb-4">Assets</h1>
+
+                        <div class="dropdown assets-dropdown">
+                            <button class="btn dropdown-toggle" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                                LMD (4)
+                            </button>
+                            <div class="collapse show" id="collapseExample">
+                                <form action="" class="assets-dropdown-content pb-4">
+                                    <div class="d-flex align-items-center py-4">
+                                        <div class="input-group search">
+                                            <input type="search" class="form-control" placeholder="find asset">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-secondary" type="button"><i class="icon-Search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div><!-- d-flex -->
+
+                                    <ul class="checkboxes-list">
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="f-group">
+                                                <input class="checkbox" id="lmd1" type="checkbox" data-select="lmd1">
+                                                <label for="lmd1" class="checkbox-label">010005009095</label>
+                                            </div>
+
+                                            <span class="notification icon-notification">
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="f-group">
+                                                <input class="checkbox" id="lmd2" type="checkbox" data-select="lmd2">
+                                                <label for="lmd2" class="checkbox-label">010005009095</label>
+                                            </div>
+
+                                            <span class="notification icon-notification">
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="f-group">
+                                                <input class="checkbox" id="lmd3" type="checkbox" data-select="lmd3">
+                                                <label for="lmd3" class="checkbox-label">010005008147</label>
+                                            </div>
+
+                                            <span class="notification icon-notification">
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="f-group">
+                                                <input class="checkbox" id="lmd4" type="checkbox" data-select="lmd4">
+                                                <label for="lmd4" class="checkbox-label">010005008138</label>
+                                            </div>
+
+                                            <span class="notification icon-notification">
+                                        </li>
+                                    </ul><!-- checkboxes-list -->
+
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                      </ul>
+                                    </nav>
+
+                                </form>
+
+                            </div>
+                        </div><!-- assets-dropdown -->
+
+                    </section>
+                </div>
+
+                <div class="col-xl-3 sm-col">
+                    <section class='fieldsets-section'>
+                        <h1 class="main-heading mb-4">Actions</h1>
+
+                        <div class="actions-block">
+                            <div class="actions-block-heading d-md-flex">
+                                <div class="f-group mr-4">
+                                     <input class="radio" id="r1" name="rd" type="radio">
+                                     <label for="r1" class="radio-label"><span>Enable</span></label>
+                               </div>
+
+                               <div class="f-group">
+                                    <input class="radio" id="r2" name="rd" type="radio">
+                                    <label for="r2" class="radio-label"><span>Disable</span></label>
+                              </div>
+                          </div><!-- actions-block-heading -->
+
+                            <div class="actions-block-content">
+                                <ul class="radiobtn-list my-3">
+                                    <li>
+                                        <div class="f-group">
+                                             <input class="radio" id="r3" name="crd" type="radio">
+                                             <label for="r3" class="radio-label"><span>LMD Hot Test</span></label>
+                                       </div>
+                                    </li>
+                                    <li>
+                                        <div class="f-group">
+                                             <input class="radio" id="r4" name="crd" type="radio">
+                                             <label for="r4" class="radio-label"><span>Battery Voltage Read</span></label>
+                                       </div>
+                                    </li>
+                                </ul><!-- radiobtn-list -->
+
+                                <div class="row sm-row py-4">
+                                    <div class="col-6 sm-col">
+                                        <button class="btn-primary full-width" type="button">Apply</button>
+                                    </div>
+                                    <div class="col-6 sm-col">
+                                        <button class="btn-danger full-width" type="button">Clear</button>
+                                    </div>
+                                </div>
+                            </div><!-- actions-block-content -->
+
+                        </div><!-- actions-block -->
+
+                    </section>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- container -->
+    </main>
+    <!-- main -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

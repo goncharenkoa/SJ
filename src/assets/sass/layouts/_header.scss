@@ -1,0 +1,9 @@
+.header {
+    border-bottom: 2px solid $border-color;
+    padding: 0 $px15;
+    @include media-breakpoint-up(md) {
+        height: $header-height;
+        display: flex;
+        align-items: center;
+    }
+}

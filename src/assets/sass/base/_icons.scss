@@ -1,0 +1,149 @@
+@include font-face(sj, '../fonts/sj');
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sj' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+$icon-arrow-1-down: "\e910";
+$icon-arrow-1-right: "\e911";
+$icon-lock: "\e912";
+$icon-check: "\e913";
+$icon-Alarms2: "\e90d";
+$icon-notification2: "\e90e";
+$icon-Pumps2: "\e90f";
+$icon-Alarms: "\e900";
+$icon-bar-chart-stats-up: "\e901";
+$icon-Command: "\e902";
+$icon-hand: "\e903";
+$icon-Logout: "\e904";
+$icon-notification: "\e905";
+$icon-Pumps: "\e906";
+$icon-router: "\e907";
+$icon-search: "\e908";
+$icon-speedometer: "\e909";
+$icon-user-2: "\e90a";
+$icon-user: "\e90b";
+$icon-warning-triangle: "\e90c";
+$icon-alarm: "\e96f";
+$icon-Search: "\e92c";
+
+.icon-arrow-1-down {
+  &:before {
+    content: $icon-arrow-1-down;
+  }
+}
+.icon-arrow-1-right {
+  &:before {
+    content: $icon-arrow-1-right;
+  }
+}
+.icon-lock {
+  &:before {
+    content: $icon-lock;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-Alarms2 {
+  &:before {
+    content: $icon-Alarms2;
+  }
+}
+.icon-notification2 {
+  &:before {
+    content: $icon-notification2;
+  }
+}
+.icon-Pumps2 {
+  &:before {
+    content: $icon-Pumps2;
+  }
+}
+.icon-alarm {
+  &:before {
+    content: $icon-alarm;
+  }
+}
+.icon-Alarms {
+  &:before {
+    content: $icon-Alarms;
+  }
+}
+.icon-bar-chart-stats-up {
+  &:before {
+    content: $icon-bar-chart-stats-up;
+  }
+}
+.icon-Command {
+  &:before {
+    content: $icon-Command;
+  }
+}
+.icon-hand {
+  &:before {
+    content: $icon-hand;
+  }
+}
+.icon-Logout {
+  &:before {
+    content: $icon-Logout;
+  }
+}
+.icon-notification {
+  &:before {
+    content: $icon-notification;
+  }
+}
+.icon-Pumps {
+  &:before {
+    content: $icon-Pumps;
+  }
+}
+.icon-router {
+  &:before {
+    content: $icon-router;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-speedometer {
+  &:before {
+    content: $icon-speedometer;
+  }
+}
+.icon-user-2 {
+  &:before {
+    content: $icon-user-2;
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user;
+  }
+}
+.icon-Search {
+  &:before {
+    content: $icon-Search;
+  }
+}
+.icon-warning-triangle {
+  &:before {
+    content: $icon-warning-triangle;
+  }
+}
