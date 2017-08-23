@@ -1,10 +1,11 @@
 .form-control {
     border-radius: 0;
-    border-color: $border-color;
+    border: 1px solid $border-color;
     height: 2.4375rem;
     line-height: 2.3125rem;
-    &:focus {
+    &:focus, &:hover {
         border-color: $theme-color;
+        border-right: none;
     }
 }
 
@@ -33,12 +34,15 @@
 }
 
 .input-group-btn {
+    left: -1px;
+    z-index: 3;
     .btn {
         border-radius: 0;
-        border-color: $border-color;
-        color: $theme-color;
+        border: 1px solid $theme-color;
+        background: $theme-color;
         font-size: $px16;
         padding: $px8 $px14;
+        height: 2.4375rem;
         &:hover {
             background: $theme-color;
             border-color: $theme-color;

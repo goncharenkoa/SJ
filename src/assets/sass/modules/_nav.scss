@@ -123,13 +123,16 @@
         text-align: center;
         @include media-breakpoint-up(md) {
             height: $header-height;
-            border-right: 2px solid $border-color;
-            width: 25%;
+            border-left: 2px solid $border-color;
+            width: 82px;
             justify-content: center;
         }
-        &:first-child {
+        @include media-breakpoint-up(lg) {
+            width: 135px;
+        }
+        &:last-child {
             @include media-breakpoint-up(md) {
-                border-left: 2px solid $border-color;
+                border-right: 2px solid $border-color;
             }
         }
         i {
