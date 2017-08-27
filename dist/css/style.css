@@ -7280,8 +7280,7 @@ button, input, optgroup, select, textarea {
   height: 2.4375rem;
   line-height: 2.3125rem; }
   .form-control:focus, .assets-dropdown .dropdown-toggle:focus, .form-control:hover, .assets-dropdown .dropdown-toggle:hover {
-    border-color: #25285b;
-    border-right: none; }
+    border-color: #25285b; }
 
 .input-group {
   margin: 0; }
@@ -8085,5 +8084,154 @@ input[type=radio]:focus + label::before {
     .filters-list li:last-child {
       margin-left: 0.9375rem;
       margin-left: 0.625rem; }
+
+.main-full-screen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../images/photo-bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 0.9375rem; }
+  @media (min-width: 768px) {
+    .main-full-screen {
+      height: 100vh; } }
+
+.intro-block {
+  padding-right: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: 0.9375rem; }
+  @media (min-width: 768px) {
+    .intro-block {
+      margin-top: 2.5rem; } }
+  @media (min-width: 992px) {
+    .intro-block {
+      padding-right: 3.125rem;
+      margin-right: 3.125rem; } }
+  .intro-block h1 {
+    color: #fff;
+    font-size: 1.875rem;
+    margin-bottom: 1.875rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+    @media (min-width: 992px) {
+      .intro-block h1 {
+        font-size: 3.125rem; } }
+    @media (min-width: 1200px) {
+      .intro-block h1 {
+        font-size: 4.375rem; } }
+  .intro-block .subheading {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    line-height: 1.875rem; }
+    @media (min-width: 768px) {
+      .intro-block .subheading {
+        font-size: 1.875rem;
+        line-height: 2.5rem; } }
+    .intro-block .subheading:after {
+      content: "";
+      background-color: #6984a2;
+      opacity: 0.9;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: -100%;
+      right: 0;
+      z-index: -1;
+      height: 1.875rem; }
+      @media (min-width: 768px) {
+        .intro-block .subheading:after {
+          height: 2.5rem; } }
+
+.form-container {
+  max-width: 26rem;
+  text-align: center;
+  margin-top: 0; }
+  .form-container-inner {
+    background: #fff;
+    margin: 0;
+    margin-top: 2.5rem; }
+  .form-container-heading {
+    border-bottom: 1px solid #d0d4d9; }
+  .form-container h2 {
+    text-transform: uppercase; }
+  .form-container h3 {
+    color: #343434;
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .form-container form {
+    text-align: left; }
+  .form-container .label {
+    display: block; }
+  .form-container .btn-danger {
+    line-height: 3.9375rem;
+    height: 3.9375rem; }
+  .form-container a {
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .form-container a:hover {
+      color: #cb1d38; }
+
+.form-content {
+  padding: 0 0.9375rem; }
+  @media (min-width: 768px) {
+    .form-content {
+      padding: 0 1.875rem; } }
+
+.icon-label-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .icon-label-wrapper i {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 2.5rem;
+    width: 2.8125rem;
+    font-size: 1.875rem;
+    border: 1px solid #d0d4d9;
+    color: #25285b;
+    border-right: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .icon-label-wrapper .form-control, .icon-label-wrapper .assets-dropdown .dropdown-toggle, .assets-dropdown .icon-label-wrapper .dropdown-toggle {
+    height: 2.5rem; }
+  .icon-label-wrapper:hover i, .icon-label-wrapper:focus i {
+    border-color: #25285b; }
+
+.label {
+  font-size: 1rem;
+  color: #646464;
+  margin: 0 0 0.1875rem; }
 
 /*# sourceMappingURL=maps/style.css.map */
